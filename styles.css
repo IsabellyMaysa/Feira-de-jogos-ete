@@ -1,0 +1,438 @@
+body {
+    background: url(imagens/fundo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+}
+
+#home {
+    text-align: right;
+    font-size: 22px;
+    padding-right: 20px; 
+}
+
+#home h1 {
+    font-size: 45px;
+    text-align: right; 
+    color: #000000;
+}
+
+#home a {
+    margin: 5px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 25px;
+    margin-top: -5%;
+}
+
+#home a:hover {
+    color: rgb(112, 54, 54);
+}
+
+#sobre a {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 26px;
+}
+
+#sobre {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+}
+
+#sobre h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#sobre p {
+    font-size: 22px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+#sobre h3 {
+    font-size: 24px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#sobre ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+#sobre ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+#sobre ul li img {
+    width: 48px;
+    height: 48px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.login-box {
+    margin-top: 80px;
+    width: 450px;
+    padding: 40px;
+    background: rgba(211, 214, 199, 0.901);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input, 
+.login-box .user-box select {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    background: transparent;
+    appearance: none; 
+    cursor: pointer; 
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 8px 10px;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 19px;
+    color: #000000;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label,
+.login-box .user-box select:focus ~ label,
+.login-box .user-box select:valid ~ label {
+    top: -30px;
+    left: 0;
+    color: rgb(0, 0, 0);
+    font-size: 19px;
+}
+
+/* estilos aplicados tanto para <a> quanto para <button> */
+.login-box form a,
+.login-box form button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #000000;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    background-color: #b3b199de;
+    border: solid 2px #000000da;
+    border-radius: 10px;
+    cursor: pointer; /* importante para o botão */
+}
+
+/* hover para <a> e <button> */
+.login-box a:hover,
+.login-box button:hover {
+    background: #666557da;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #666557da,
+                0 0 25px #666557da,
+                0 0 50px #666557da,
+                0 0 100px #666557da;
+}
+
+.login-box a span,
+.login-box button span {
+    position: absolute;
+    display: block;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+.login-box a span:nth-child(1),
+.login-box button span:nth-child(1) {
+    bottom: 2px;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffffff);
+    animation: btn-anim1 2s linear infinite;
+}
+
+.user-box select:focus {
+    background-color: #333; 
+    color: #fff; 
+}
+
+/* .ranking-box {
+    width: 400px;
+    padding: 40px;
+    background: rgba(249, 153, 153, 0.901);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+    color: #fff;
+}
+
+.ranking-box h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ranking-box h3 {
+    border: solid rgb(255, 255, 255) 2px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+} */
+
+ul {
+    list-style: none;
+}
+
+
+/*CSS MOBILE*/
+@media (max-width: 600px) {
+    body {
+        background: url(imagens/fundo.jpg);
+        background-size: cover;
+        background-position: center;
+        font-size: 14px;
+    }
+
+    #home {
+        text-align: center;
+        font-size: 18px;
+        padding-right: 10px; 
+    }
+
+    #home h1 {
+        font-size: 32px;
+        text-align: center; 
+        color: #000;
+    }
+
+    #home a {
+        font-size: 20px;
+        margin-top: 0;
+    }
+
+    #sobre {
+        width: 90%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    #sobre h2 {
+        font-size: 28px;
+    }
+
+    #sobre p {
+        font-size: 16px;
+    }
+
+    #sobre h3 {
+        font-size: 20px;
+    }
+
+    #sobre ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-box,
+    .ranking-box {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+/*CSS ALUNOS*/
+
+/* Contêiner para os crachás */
+#image-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* sempre 3 colunas */
+    gap: 20px;
+    justify-items: center;
+    margin-top: 50px;
+    max-width: 1000px; /* largura máxima para centralizar */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Cada crachá */
+.image-item {
+    width: 250px;
+    box-sizing: border-box;
+}
+
+/* Ajuste das imagens */
+.image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+    #image-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 por linha */
+    }
+}
+
+@media (max-width: 600px) {
+    #image-container {
+        grid-template-columns: 1fr; /* 1 por linha */
+    }
+}
+
+
+/*SLA MAN KKKKK, CSS DO H1 LA DO dev.html*/
+
+.animated-border {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.animated-border h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 38px;
+    color: #2c3e50;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    z-index: 1;
+}
+
+.animated-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 3px;
+    background: linear-gradient(45deg, #b5b689, #d6c699, #d3c19b);
+    background-size: 300% 300%;
+    border-radius: 12px;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    animation: borderFlow 4s linear infinite;
+}
+
+@keyframes borderFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/*CSS MATERIA SELECT TLG? KKK QUE COMENTARIO É ESSE VEI*/
+/* CSS do botão de materias mas n tou usando mais tlg comentario de 2024 emcima de doente */
+
+.materiaSelect {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.materiaSelect label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.materiaSelect select {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    border: 2px solid #e24646;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.materiaSelect select:hover {
+    border-color: #40e2ff;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.materiaSelect select:focus {
+    outline: none;
+    border-color: #0051ff;
+    background-color: #ffffff;
+    color: #333;
+}
